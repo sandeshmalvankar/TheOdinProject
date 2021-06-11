@@ -1,6 +1,9 @@
 const rock = 'ROCK'
 const paper = 'PAPER'
 const scirrors = 'SCIRRORS'
+let computerSelection = document.querySelector('.computerSelection')
+let playerSelection = document.querySelector('.playerSelection')
+let winner = document.querySelector('.winner')
 
 function randomNumber(array){
     return Math.floor((Math.random() * array.length))
@@ -31,7 +34,8 @@ function playRound(playerSelection, computerSelection) {
         return 'It\'s a tie'
     }
 }
-
-const playerSelection = computerPlay()
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function onPlayerSelection(id) {
+    playerSelection.textContent = id.toUpperCase()
+    computerSelection.textContent = computerPlay();
+    winner.textContent = playRound(playerSelection.textContent, computerSelection.textContent)
+}

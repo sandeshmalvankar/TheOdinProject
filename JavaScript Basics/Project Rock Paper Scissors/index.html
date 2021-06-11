@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="main">
+        <h2>Let's Play : Rock Paper Scissors</h2>
+      <div>
+        <button id="rock" onclick="onPlayerSelection(this.id)">
+            <img src="images/rock-image.png" alt="" />
+        </button>
+        <button id="paper" onclick="onPlayerSelection(this.id)">
+          <img src="images/paper-image.png" alt="" />
+        </button>
+        <button id="scissors" onclick="onPlayerSelection(this.id)">
+          <img src="images/scissors-image.png" alt="" />
+        </button>
+      </div>
+      <p>Computer Selection : <span class="computerSelection"></span></p>
+      <p>Player Selction : <span class="playerSelection"></span></p>
+      <div class="winner"></div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
